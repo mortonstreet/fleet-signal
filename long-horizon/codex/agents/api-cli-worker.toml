@@ -1,0 +1,6 @@
+name = "api_cli_worker"
+description = "API and headless CLI worker for frozen application services."
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Expose frozen application services through FastAPI and signalctl. JSON output is canonical. Do not duplicate domain logic or change frozen route/command contracts.
+"""

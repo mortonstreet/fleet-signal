@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "code",
+    "type",
+    "message",
+    "created_at"
+  ],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "EXTERNAL",
+        "INTERNAL",
+        "HARNESS"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "resolved_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

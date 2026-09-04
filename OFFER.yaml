@@ -1,0 +1,107 @@
+num: '02'
+slug: fleet-finance
+module: fleet
+name: Fleet Finance Signals
+stance: BUILD_NOW
+acv: $18k–$42k/yr target
+cycle: 4–8 weeks
+users:
+- VP Originations
+- equipment/fleet finance BDM
+- transportation finance sales director
+- portfolio/renewal manager
+objective: Surface fleets entering refinance, growth or replacement windows by joining
+  state UCC filings to FMCSA carrier records and VIN-level equipment specifications.
+p0:
+- Colorado UCC multi-table ingest
+- UCC filing/debtor/secured-party/collateral join
+- VIN extraction + validation
+- FMCSA carrier entity resolution
+- vPIC batch decode cache
+- T1 refi/payoff event and score
+- lender-book audit
+- signal inbox + fleet detail
+- CSV/webhook export
+- source provenance
+p1:
+- FMCSA historical snapshot deltas for fleet growth
+- recall and safety overlays
+- additional UCC states behind source-specific rights gate
+- competitor lender watchlists
+- CRM suppression sync
+p2:
+- attribution from subsequent UCC filing naming customer as secured party
+- distress SKU
+- optional licensed title/NMVTIS data
+- customer outcome-driven score calibration
+entities:
+- fleet
+- carrier
+- ucc_filing
+- secured_party
+- debtor
+- vehicle
+- lender
+- watch
+events:
+- UCC_FILED
+- UCC_CONTINUED
+- UCC_TERMINATED
+- LIEN_WINDOW_ENTERED
+- NEW_AUTHORITY
+- FLEET_GROWTH
+- AGING_FLEET
+- LENDER_SWITCH
+signals:
+- refi_opportunity
+- growth_finance_opportunity
+- replacement_opportunity
+- competitive_takeout
+- portfolio_retention_risk
+scores:
+- 'T1 timing: months-to-lapse + no continuation + VIN-specific collateral'
+- 'growth: power-unit delta + recency'
+- 'asset: vehicle class/age/body/GVWR'
+- contactability + source freshness
+- exclude low-confidence UCC↔FMCSA resolutions
+workflow:
+- Sync CO UCC partitions
+- Join filing↔debtor↔secured party↔collateral
+- Extract VINs and classify blanket collateral
+- Resolve debtor to FMCSA/USDOT
+- Decode VINs in cached 50-VIN vPIC batches
+- Build current lien snapshot
+- Detect month-54+ / no-continuation window
+- Score and match lender territory/watch
+- Generate lender-book leakage audit
+- Record meeting/funded outcome and later attribution
+screens:
+- Origination signal inbox
+- Fleet detail with UCC timeline
+- Equipment/VIN table
+- Lender/secured-party explorer
+- Own-book audit wizard
+- Watch builder by state/class/lender
+- Source-resolution evidence drawer
+- Outcome/funding attribution
+cli:
+- fleet source sync co-ucc --since 2026-01-01
+- fleet source sync fmcsa-census
+- fleet ucc join --state CO
+- fleet vin decode --pending --batch-size 50
+- fleet events detect --type LIEN_WINDOW_ENTERED
+- fleet signals list --tier A --state CO
+- fleet audit lender --secured-party "Example Bank"
+- fleet export --watch <id> --format csv
+infra: FMCSA and multi-table UCC snapshots belong in ClickHouse/Parquet; canonical
+  fleets/lenders/watch config in Postgres; raw Socrata pages and state exports in
+  R2. VIN decode cache can be ClickHouse or Postgres keyed by VIN+decoder_version.
+acquisition: No browser required for P0. Use Socrata API/export for Colorado and FMCSA;
+  httpx for vPIC/NHTSA. Add state-specific adapters only after access and downstream-use
+  rights are documented.
+proof: 'Lender Leakage Audit: count own liens entering a refinance/lapse window plus
+  3–10 competitor-financed fleets with timing, fleet growth and equipment evidence.'
+blockers:
+- UCC source schemas and availability vary materially by state
+- entity resolution between debtor legal names and FMCSA carriers
+- blanket liens may lack VINs

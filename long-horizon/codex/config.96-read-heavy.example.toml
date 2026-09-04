@@ -1,0 +1,9 @@
+# Experimental high-parallelism profile inspired by Matt Shumer's reported 96-subagent run.
+# Use mainly for read-heavy exploration/test shards. Do not launch 96 concurrent writers.
+[features]
+goals = true
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 96
+interrupt_message = true

@@ -1,0 +1,84 @@
+{
+  "offer": "fleet",
+  "phases": [
+    {
+      "id": "P00",
+      "name": "Harness and contract freeze",
+      "lane": "integration",
+      "objective": "Initialize long-horizon state, scaffold repo, freeze contracts and concrete acceptance commands.",
+      "requirement_ids": []
+    },
+    {
+      "id": "P10",
+      "name": "Source acquisition",
+      "lane": "ingest",
+      "objective": "Build P0 source adapters, immutable raw persistence, health checks and golden fixtures.",
+      "requirement_ids": [
+        "REQ-01",
+        "REQ-10",
+        "REQ-DOD-01",
+        "REQ-DOD-02"
+      ]
+    },
+    {
+      "id": "P20",
+      "name": "Domain pipeline",
+      "lane": "domain",
+      "objective": "Build parsers, normalization, entity resolution, snapshots/diffs and core event semantics.",
+      "requirement_ids": [
+        "REQ-02",
+        "REQ-03",
+        "REQ-04",
+        "REQ-05"
+      ]
+    },
+    {
+      "id": "P30",
+      "name": "Signals and proof",
+      "lane": "domain",
+      "objective": "Build signal rules/scoring/watch matching and the core proof artifact.",
+      "requirement_ids": [
+        "REQ-06",
+        "REQ-07",
+        "REQ-DOD-03"
+      ]
+    },
+    {
+      "id": "P40",
+      "name": "API, CLI and delivery",
+      "lane": "api-cli",
+      "objective": "Expose application services through FastAPI and signalctl with export/delivery behavior.",
+      "requirement_ids": [
+        "REQ-09",
+        "REQ-DOD-04"
+      ]
+    },
+    {
+      "id": "P50",
+      "name": "Human UX",
+      "lane": "ui",
+      "objective": "Build the offer-specific UI workflow against frozen contracts and required system states.",
+      "requirement_ids": [
+        "REQ-08",
+        "REQ-DOD-05"
+      ]
+    },
+    {
+      "id": "P60",
+      "name": "QA, replay and observability",
+      "lane": "qa",
+      "objective": "Build E2E/replay/evals/telemetry/security/runbooks and close test gaps.",
+      "requirement_ids": [
+        "REQ-DOD-06",
+        "REQ-DOD-07"
+      ]
+    },
+    {
+      "id": "P70",
+      "name": "Integration and release",
+      "lane": "integration",
+      "objective": "Rebase/merge lanes, run fresh-checkout full replay and final readiness.",
+      "requirement_ids": []
+    }
+  ]
+}

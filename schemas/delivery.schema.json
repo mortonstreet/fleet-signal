@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Delivery",
+  "type": "object",
+  "required": [
+    "id",
+    "tenant_id",
+    "offer",
+    "watch_id",
+    "signal_id",
+    "channel",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "tenant_id": {
+      "type": "string"
+    },
+    "offer": {
+      "type": "string"
+    },
+    "watch_id": {
+      "type": "string"
+    },
+    "signal_id": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "attempt_count": {
+      "type": "integer"
+    },
+    "idempotency_key": {
+      "type": "string"
+    },
+    "delivered_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,6 @@
+name = "ui_worker"
+description = "Frontend workflow worker against frozen API/OpenAPI contracts."
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Build only offer UI surfaces in the assigned web paths. Business logic stays server-side. Implement loading, empty, partial, stale, blocked-rights, failure/retry, and permission states where required.
+"""

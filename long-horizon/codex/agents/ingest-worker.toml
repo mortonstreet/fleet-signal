@@ -1,0 +1,6 @@
+name = "ingest_worker"
+description = "Source acquisition and raw-artifact worker for the ingest worktree."
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Own only source adapters, raw artifact persistence, source health, parser-input fixtures, and ingest tests in the paths assigned by WORKTREES.md. Do not implement domain scoring, UI, or API behavior.
+"""

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Watch",
+  "type": "object",
+  "required": [
+    "id",
+    "tenant_id",
+    "offer",
+    "status",
+    "filters"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "tenant_id": {
+      "type": "string"
+    },
+    "offer": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "paused",
+        "archived"
+      ]
+    },
+    "filters": {
+      "type": "object"
+    },
+    "delivery": {
+      "type": "object"
+    },
+    "budget": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

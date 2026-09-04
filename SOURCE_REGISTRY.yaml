@@ -1,0 +1,104 @@
+offer: fleet-finance
+reviewed_at: '2026-09-04'
+sources:
+- id: co_ucc_filings
+  name: Colorado UCC Filing Information
+  url: https://data.colorado.gov/d/wffy-3uut
+  access: Socrata open data
+  auth: optional app token
+  cadence: source-dependent
+  rights_status: OPEN_CONFIRMED
+  acquisition: socrata
+  priority: P0
+  browser_allowed: false
+  notes: Dataset id wffy-3uut.
+- id: co_ucc_secured
+  name: Colorado Secured Party Information
+  url: https://data.colorado.gov/d/ap62-sav4
+  access: Socrata open data
+  auth: optional app token
+  cadence: source-dependent
+  rights_status: OPEN_CONFIRMED
+  acquisition: socrata
+  priority: P0
+  browser_allowed: false
+  notes: Dataset id ap62-sav4.
+- id: co_ucc_collateral
+  name: Colorado UCC Collateral Information
+  url: https://data.colorado.gov/d/4am6-w6u4
+  access: Socrata open data
+  auth: optional app token
+  cadence: source-dependent
+  rights_status: OPEN_CONFIRMED
+  acquisition: socrata
+  priority: P0
+  browser_allowed: false
+  notes: Dataset id 4am6-w6u4.
+- id: co_ucc_debtors
+  name: Colorado UCC Debtor Information
+  url: https://data.colorado.gov/d/8upq-58vz
+  access: Socrata open data
+  auth: optional app token
+  cadence: source-dependent
+  rights_status: OPEN_CONFIRMED
+  acquisition: socrata
+  priority: P0
+  browser_allowed: false
+  notes: Dataset id 8upq-58vz.
+- id: fmcsa_census
+  name: FMCSA Company Census File
+  url: https://data.transportation.gov/d/az4n-8mr2
+  access: Socrata public dataset
+  auth: optional app token
+  cadence: daily-ish; source dataset updated frequently
+  rights_status: OPEN_CONFIRMED
+  acquisition: socrata
+  priority: P0
+  browser_allowed: false
+  notes: USDOT identity, equipment, drivers, business operations.
+- id: vpic
+  name: NHTSA vPIC Vehicle API
+  url: https://vpic.nhtsa.dot.gov/api/
+  access: public API
+  auth: none
+  cadence: on demand
+  rights_status: OPEN_CONFIRMED
+  acquisition: httpx
+  priority: P0
+  browser_allowed: false
+  notes: DecodeVINValuesBatch supports max 50 VINs; cache forever unless decoder-version
+    migration needed.
+- id: nhtsa_recalls
+  name: NHTSA Recalls API
+  url: https://api.nhtsa.gov/recalls/recallsByVehicle
+  access: public API
+  auth: none
+  cadence: on demand
+  rights_status: OPEN_CONFIRMED
+  acquisition: httpx
+  priority: P1
+  browser_allowed: false
+  notes: Model-year/make/model recall overlay.
+- id: fl_ucc
+  name: Florida Secured Transaction Registry
+  url: https://floridaucc.com/
+  access: public search / separate download product
+  auth: site/account-specific
+  cadence: unknown
+  rights_status: CONTRACT_REQUIRED
+  acquisition: manual_or_licensed_download
+  priority: P1
+  browser_allowed: false
+  notes: Do not assume free bulk/redistribution; confirm commercial data-download
+    rights before implementation.
+- id: nmvtis
+  name: NMVTIS title data
+  url: provider-specific
+  access: licensed provider
+  auth: contract
+  cadence: on demand
+  rights_status: CONTRACT_REQUIRED
+  acquisition: provider_api
+  priority: P2
+  browser_allowed: false
+  notes: Optional; never claim public/open.

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "phase",
+      "title",
+      "status"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "phase": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "status": {
+        "enum": [
+          "PENDING",
+          "IN_PROGRESS",
+          "PASS",
+          "FAIL",
+          "BLOCKED",
+          "DEFERRED"
+        ]
+      },
+      "requirement_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "evidence": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "offers": [
+    {
+      "folder": "01-recruiting-intelligence",
+      "runtime_slug": "recruiting",
+      "title": "Recruiter Candidate + BD Intelligence",
+      "build_stance": "CORE_REVENUE",
+      "launch": "offers/01-recruiting-intelligence/LONG_HORIZON/LAUNCH.md",
+      "external_required": [
+        "EXT-CANDIDATE-RIGHTS"
+      ]
+    },
+    {
+      "folder": "02-fleet-finance",
+      "runtime_slug": "fleet",
+      "title": "Fleet Finance Signals",
+      "build_stance": "BUILD_NOW",
+      "launch": "offers/02-fleet-finance/LONG_HORIZON/LAUNCH.md",
+      "external_required": []
+    },
+    {
+      "folder": "03-510k-competitive-watch",
+      "runtime_slug": "fda510k",
+      "title": "510(k) Competitive Watch",
+      "build_stance": "BUILD_NOW",
+      "launch": "offers/03-510k-competitive-watch/LONG_HORIZON/LAUNCH.md",
+      "external_required": []
+    },
+    {
+      "folder": "04-fl-tax-lien-pipeline",
+      "runtime_slug": "fl_tax_lien",
+      "title": "Florida Federal Tax-Lien Pipeline",
+      "build_stance": "VALIDATE_FAST",
+      "launch": "offers/04-fl-tax-lien-pipeline/LONG_HORIZON/LAUNCH.md",
+      "external_required": [
+        "EXT-SUNBIZ-ACCESS"
+      ]
+    },
+    {
+      "folder": "05-nyc-acris-intelligence",
+      "runtime_slug": "acris",
+      "title": "NYC ACRIS Intelligence",
+      "build_stance": "VALIDATE",
+      "launch": "offers/05-nyc-acris-intelligence/LONG_HORIZON/LAUNCH.md",
+      "external_required": []
+    },
+    {
+      "folder": "06-cre-deal-intelligence",
+      "runtime_slug": "cre",
+      "title": "CRE Deal Intelligence",
+      "build_stance": "STRATEGIC",
+      "launch": "offers/06-cre-deal-intelligence/LONG_HORIZON/LAUNCH.md",
+      "external_required": []
+    },
+    {
+      "folder": "07-yeti-freight-signals",
+      "runtime_slug": "freight",
+      "title": "Yeti Freight Signals",
+      "build_stance": "STRATEGIC_SIGNAL_ONLY_FIRST",
+      "launch": "offers/07-yeti-freight-signals/LONG_HORIZON/LAUNCH.md",
+      "external_required": [
+        "EXT-MANIFEST-FEED"
+      ]
+    },
+    {
+      "folder": "08-govcon-prime-smb-match",
+      "runtime_slug": "govcon",
+      "title": "Prime \u2192 SMB GovCon Match",
+      "build_stance": "STRATEGIC",
+      "launch": "offers/08-govcon-prime-smb-match/LONG_HORIZON/LAUNCH.md",
+      "external_required": []
+    },
+    {
+      "folder": "09-permit-contractor-leads",
+      "runtime_slug": "permits",
+      "title": "Permit-Derived Contractor Leads",
+      "build_stance": "BLOCKED_PENDING_RIGHTS",
+      "launch": "offers/09-permit-contractor-leads/LONG_HORIZON/LAUNCH.md",
+      "external_required": [
+        "EXT-PERMIT-REDISTRIBUTION"
+      ]
+    },
+    {
+      "folder": "10-nmls-compliance-signals",
+      "runtime_slug": "nmls",
+      "title": "NMLS Compliance Signals (marketing modules gated)",
+      "build_stance": "RE_SCOPED_COMPLIANCE_ONLY",
+      "launch": "offers/10-nmls-compliance-signals/LONG_HORIZON/LAUNCH.md",
+      "external_required": [
+        "EXT-NMLS-B2B"
+      ]
+    }
+  ],
+  "recommended_active_mvp_loops": 3,
+  "shared_write_policy": "serialize shared/root contract changes"
+}

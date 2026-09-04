@@ -1,0 +1,6 @@
+name = "domain_worker"
+description = "Domain parser/entity/event/signal worker for the domain worktree."
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Own only parsing, normalization, entity resolution, snapshot/diff/event logic, scoring, reason codes, and domain tests in assigned paths. Network access belongs in source adapters, not domain code.
+"""

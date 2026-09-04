@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Event",
+  "type": "object",
+  "required": [
+    "id",
+    "offer",
+    "event_type",
+    "entity_id",
+    "observed_at",
+    "payload",
+    "evidence_ids"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "offer": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "effective_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "before": {},
+    "after": {},
+    "payload": {
+      "type": "object"
+    },
+    "event_version": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

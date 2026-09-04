@@ -1,0 +1,386 @@
+{
+  "offer": "fleet",
+  "tasks": [
+    {
+      "id": "P00-01",
+      "phase": "P00",
+      "title": "Run harness preflight for /goal, subagents, Git and worktrees",
+      "lane": "integration",
+      "requirement_ids": []
+    },
+    {
+      "id": "P00-02",
+      "phase": "P00",
+      "title": "Initialize .loop durable state and progress HTML",
+      "lane": "integration",
+      "requirement_ids": []
+    },
+    {
+      "id": "P00-03",
+      "phase": "P00",
+      "title": "Freeze runtime paths, event/API/CLI contracts and lane ownership",
+      "lane": "integration",
+      "requirement_ids": []
+    },
+    {
+      "id": "P00-04",
+      "phase": "P00",
+      "title": "Compile acceptance_seed.json into concrete .loop/acceptance.lock.json and freeze hash",
+      "lane": "integration",
+      "requirement_ids": []
+    },
+    {
+      "id": "P00-05",
+      "phase": "P00",
+      "title": "Bootstrap integration branch and five exclusive worktrees",
+      "lane": "integration",
+      "requirement_ids": []
+    },
+    {
+      "id": "REQ-01-A",
+      "phase": "P10",
+      "title": "Implement: Colorado UCC multi-table ingest",
+      "lane": "ingest",
+      "requirement_ids": [
+        "REQ-01"
+      ]
+    },
+    {
+      "id": "REQ-01-B",
+      "phase": "P10",
+      "title": "Add positive-path verification for: Colorado UCC multi-table ingest",
+      "lane": "ingest",
+      "requirement_ids": [
+        "REQ-01"
+      ]
+    },
+    {
+      "id": "REQ-01-C",
+      "phase": "P10",
+      "title": "Add failure/edge/idempotency verification as applicable for: Colorado UCC multi-table ingest",
+      "lane": "ingest",
+      "requirement_ids": [
+        "REQ-01"
+      ]
+    },
+    {
+      "id": "REQ-02-A",
+      "phase": "P20",
+      "title": "Implement: UCC filing/debtor/secured-party/collateral join",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-02"
+      ]
+    },
+    {
+      "id": "REQ-02-B",
+      "phase": "P20",
+      "title": "Add positive-path verification for: UCC filing/debtor/secured-party/collateral join",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-02"
+      ]
+    },
+    {
+      "id": "REQ-02-C",
+      "phase": "P20",
+      "title": "Add failure/edge/idempotency verification as applicable for: UCC filing/debtor/secured-party/collateral join",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-02"
+      ]
+    },
+    {
+      "id": "REQ-03-A",
+      "phase": "P20",
+      "title": "Implement: VIN extraction + validation",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-03"
+      ]
+    },
+    {
+      "id": "REQ-03-B",
+      "phase": "P20",
+      "title": "Add positive-path verification for: VIN extraction + validation",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-03"
+      ]
+    },
+    {
+      "id": "REQ-03-C",
+      "phase": "P20",
+      "title": "Add failure/edge/idempotency verification as applicable for: VIN extraction + validation",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-03"
+      ]
+    },
+    {
+      "id": "REQ-04-A",
+      "phase": "P20",
+      "title": "Implement: FMCSA carrier entity resolution",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-04"
+      ]
+    },
+    {
+      "id": "REQ-04-B",
+      "phase": "P20",
+      "title": "Add positive-path verification for: FMCSA carrier entity resolution",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-04"
+      ]
+    },
+    {
+      "id": "REQ-04-C",
+      "phase": "P20",
+      "title": "Add failure/edge/idempotency verification as applicable for: FMCSA carrier entity resolution",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-04"
+      ]
+    },
+    {
+      "id": "REQ-05-A",
+      "phase": "P20",
+      "title": "Implement: vPIC batch decode cache",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-05"
+      ]
+    },
+    {
+      "id": "REQ-05-B",
+      "phase": "P20",
+      "title": "Add positive-path verification for: vPIC batch decode cache",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-05"
+      ]
+    },
+    {
+      "id": "REQ-05-C",
+      "phase": "P20",
+      "title": "Add failure/edge/idempotency verification as applicable for: vPIC batch decode cache",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-05"
+      ]
+    },
+    {
+      "id": "REQ-06-A",
+      "phase": "P30",
+      "title": "Implement: T1 refi/payoff event and score",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-06"
+      ]
+    },
+    {
+      "id": "REQ-06-B",
+      "phase": "P30",
+      "title": "Add positive-path verification for: T1 refi/payoff event and score",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-06"
+      ]
+    },
+    {
+      "id": "REQ-06-C",
+      "phase": "P30",
+      "title": "Add failure/edge/idempotency verification as applicable for: T1 refi/payoff event and score",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-06"
+      ]
+    },
+    {
+      "id": "REQ-07-A",
+      "phase": "P30",
+      "title": "Implement: lender-book audit",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-07"
+      ]
+    },
+    {
+      "id": "REQ-07-B",
+      "phase": "P30",
+      "title": "Add positive-path verification for: lender-book audit",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-07"
+      ]
+    },
+    {
+      "id": "REQ-07-C",
+      "phase": "P30",
+      "title": "Add failure/edge/idempotency verification as applicable for: lender-book audit",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-07"
+      ]
+    },
+    {
+      "id": "REQ-08-A",
+      "phase": "P50",
+      "title": "Implement: signal inbox + fleet detail",
+      "lane": "ui",
+      "requirement_ids": [
+        "REQ-08"
+      ]
+    },
+    {
+      "id": "REQ-08-B",
+      "phase": "P50",
+      "title": "Add positive-path verification for: signal inbox + fleet detail",
+      "lane": "ui",
+      "requirement_ids": [
+        "REQ-08"
+      ]
+    },
+    {
+      "id": "REQ-08-C",
+      "phase": "P50",
+      "title": "Add failure/edge/idempotency verification as applicable for: signal inbox + fleet detail",
+      "lane": "ui",
+      "requirement_ids": [
+        "REQ-08"
+      ]
+    },
+    {
+      "id": "REQ-09-A",
+      "phase": "P40",
+      "title": "Implement: CSV/webhook export",
+      "lane": "api-cli",
+      "requirement_ids": [
+        "REQ-09"
+      ]
+    },
+    {
+      "id": "REQ-09-B",
+      "phase": "P40",
+      "title": "Add positive-path verification for: CSV/webhook export",
+      "lane": "api-cli",
+      "requirement_ids": [
+        "REQ-09"
+      ]
+    },
+    {
+      "id": "REQ-09-C",
+      "phase": "P40",
+      "title": "Add failure/edge/idempotency verification as applicable for: CSV/webhook export",
+      "lane": "api-cli",
+      "requirement_ids": [
+        "REQ-09"
+      ]
+    },
+    {
+      "id": "REQ-10-A",
+      "phase": "P10",
+      "title": "Implement: source provenance",
+      "lane": "ingest",
+      "requirement_ids": [
+        "REQ-10"
+      ]
+    },
+    {
+      "id": "REQ-10-B",
+      "phase": "P10",
+      "title": "Add positive-path verification for: source provenance",
+      "lane": "ingest",
+      "requirement_ids": [
+        "REQ-10"
+      ]
+    },
+    {
+      "id": "REQ-10-C",
+      "phase": "P10",
+      "title": "Add failure/edge/idempotency verification as applicable for: source provenance",
+      "lane": "ingest",
+      "requirement_ids": [
+        "REQ-10"
+      ]
+    },
+    {
+      "id": "DOD-SOURCE",
+      "phase": "P10",
+      "title": "Verify rights/source health, raw-before-parse, idempotent/resumable ingestion",
+      "lane": "ingest",
+      "requirement_ids": [
+        "REQ-DOD-01",
+        "REQ-DOD-02"
+      ]
+    },
+    {
+      "id": "DOD-EVIDENCE",
+      "phase": "P30",
+      "title": "Verify score/reason/evidence provenance on all P0 signals",
+      "lane": "domain",
+      "requirement_ids": [
+        "REQ-DOD-03"
+      ]
+    },
+    {
+      "id": "DOD-AGENT",
+      "phase": "P40",
+      "title": "Verify CLI/API parity, --json/non-interactive behavior and deterministic exit codes",
+      "lane": "api-cli",
+      "requirement_ids": [
+        "REQ-DOD-04"
+      ]
+    },
+    {
+      "id": "DOD-UI",
+      "phase": "P50",
+      "title": "Verify all required UI system states and no client-owned business logic",
+      "lane": "ui",
+      "requirement_ids": [
+        "REQ-DOD-05"
+      ]
+    },
+    {
+      "id": "DOD-REPLAY",
+      "phase": "P60",
+      "title": "Run full golden offline replay from source fixture through delivery/outcome",
+      "lane": "qa",
+      "requirement_ids": [
+        "REQ-DOD-06"
+      ]
+    },
+    {
+      "id": "DOD-OPS",
+      "phase": "P60",
+      "title": "Verify telemetry, source drift/outage runbook, security and tenant isolation checks",
+      "lane": "qa",
+      "requirement_ids": [
+        "REQ-DOD-07"
+      ]
+    },
+    {
+      "id": "P70-01",
+      "phase": "P70",
+      "title": "Merge accepted worktrees into integration branch in documented order",
+      "lane": "integration",
+      "requirement_ids": []
+    },
+    {
+      "id": "P70-02",
+      "phase": "P70",
+      "title": "Validate clean fresh checkout and deterministic bootstrap",
+      "lane": "integration",
+      "requirement_ids": []
+    },
+    {
+      "id": "P70-03",
+      "phase": "P70",
+      "title": "Run full acceptance lock and final readiness",
+      "lane": "integration",
+      "requirement_ids": []
+    }
+  ]
+}

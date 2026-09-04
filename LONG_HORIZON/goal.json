@@ -1,0 +1,106 @@
+{
+  "offer": "fleet",
+  "offer_folder": "02-fleet-finance",
+  "title": "Fleet Finance Signals",
+  "build_stance": "BUILD_NOW",
+  "objective": "Build the complete sellable P0 MVP for Fleet Finance Signals from the attached technical execution pack.",
+  "stopping_condition": "All required P0 checklist items and frozen acceptance gates pass; full offline replay and fresh-checkout verification pass; no unresolved internal severity 1/2 blocker; required external production gates are green.",
+  "allowed_terminal_states": [
+    "COMPLETE",
+    "IMPLEMENTATION_COMPLETE_BLOCKED_EXTERNAL",
+    "FAILED_REQUIRES_HUMAN"
+  ],
+  "p0_requirements": [
+    "REQ-01",
+    "REQ-02",
+    "REQ-03",
+    "REQ-04",
+    "REQ-05",
+    "REQ-06",
+    "REQ-07",
+    "REQ-08",
+    "REQ-09",
+    "REQ-10",
+    "REQ-DOD-01",
+    "REQ-DOD-02",
+    "REQ-DOD-03",
+    "REQ-DOD-04",
+    "REQ-DOD-05",
+    "REQ-DOD-06",
+    "REQ-DOD-07"
+  ],
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "text": "Colorado UCC multi-table ingest"
+    },
+    {
+      "id": "REQ-02",
+      "text": "UCC filing/debtor/secured-party/collateral join"
+    },
+    {
+      "id": "REQ-03",
+      "text": "VIN extraction + validation"
+    },
+    {
+      "id": "REQ-04",
+      "text": "FMCSA carrier entity resolution"
+    },
+    {
+      "id": "REQ-05",
+      "text": "vPIC batch decode cache"
+    },
+    {
+      "id": "REQ-06",
+      "text": "T1 refi/payoff event and score"
+    },
+    {
+      "id": "REQ-07",
+      "text": "lender-book audit"
+    },
+    {
+      "id": "REQ-08",
+      "text": "signal inbox + fleet detail"
+    },
+    {
+      "id": "REQ-09",
+      "text": "CSV/webhook export"
+    },
+    {
+      "id": "REQ-10",
+      "text": "source provenance"
+    },
+    {
+      "id": "REQ-DOD-01",
+      "text": "All enabled production sources pass rights gate and source health checks."
+    },
+    {
+      "id": "REQ-DOD-02",
+      "text": "Incremental/source processing is idempotent and resumable where applicable."
+    },
+    {
+      "id": "REQ-DOD-03",
+      "text": "Signals expose reason codes, confidence, and source evidence."
+    },
+    {
+      "id": "REQ-DOD-04",
+      "text": "CLI/API are agent-safe, machine-readable, and parity-tested."
+    },
+    {
+      "id": "REQ-DOD-05",
+      "text": "UI handles loading, empty, partial/stale/blocked, failure/retry, and permission states."
+    },
+    {
+      "id": "REQ-DOD-06",
+      "text": "Golden offline replay completes end-to-end without live network dependency."
+    },
+    {
+      "id": "REQ-DOD-07",
+      "text": "Observability, source-drift/outage runbook, security/tenant checks, and release evidence exist."
+    }
+  ],
+  "manager_does_not_write_product_code": true,
+  "implementer_phrase": "complete this phase completely, extremely well",
+  "stall_minutes": 20,
+  "max_corrective_cycles_per_phase": 4
+}

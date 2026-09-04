@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entity",
+  "type": "object",
+  "required": [
+    "id",
+    "entity_type",
+    "canonical_name"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "entity_type": {
+      "type": "string"
+    },
+    "canonical_name": {
+      "type": "string"
+    },
+    "identifiers": {
+      "type": "object"
+    },
+    "attributes": {
+      "type": "object"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

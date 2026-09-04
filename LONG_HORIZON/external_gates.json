@@ -1,0 +1,17 @@
+{
+  "offer": "fleet",
+  "gates": [
+    {
+      "id": "EXT-CO-UCC",
+      "type": "EXTERNAL",
+      "required_for_complete": false,
+      "description": "Colorado reference adapter uses public open data."
+    },
+    {
+      "id": "EXT-STATE-UCC",
+      "type": "EXTERNAL",
+      "required_for_complete": false,
+      "description": "Additional UCC states remain disabled until state-specific access/terms are documented."
+    }
+  ]
+}

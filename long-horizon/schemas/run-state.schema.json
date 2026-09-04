@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "offer",
+    "state",
+    "current_phase",
+    "started_at",
+    "acceptance_lock_sha256"
+  ],
+  "properties": {
+    "offer": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "INITIALIZING",
+        "RUNNING",
+        "IMPLEMENTATION_COMPLETE_BLOCKED_EXTERNAL",
+        "FAILED_REQUIRES_HUMAN",
+        "COMPLETE"
+      ]
+    },
+    "current_phase": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "acceptance_lock_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

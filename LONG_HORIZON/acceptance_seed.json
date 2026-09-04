@@ -1,0 +1,62 @@
+{
+  "offer": "fleet",
+  "note": "P00 Manager must compile suggested commands into concrete .loop/acceptance.lock.json after inspecting actual repo tooling. Freeze hash before P10.",
+  "acceptance": [
+    {
+      "id": "ACC-P00-PLAN",
+      "phase": "P00",
+      "required": true,
+      "description": "Long-horizon plan/manifests are internally consistent.",
+      "suggested_command": "python long-horizon/scripts/loopctl.py verify-plan --offer-dir offers/02-fleet-finance/LONG_HORIZON"
+    },
+    {
+      "id": "ACC-P10-SOURCES",
+      "phase": "P10",
+      "required": true,
+      "description": "All P0 source adapter/fixture/rights/idempotency tests pass.",
+      "suggested_command": "python -m pytest -q offers/fleet/tests/sources"
+    },
+    {
+      "id": "ACC-P20-DOMAIN",
+      "phase": "P20",
+      "required": true,
+      "description": "All P0 parser/entity/snapshot/event contract tests pass.",
+      "suggested_command": "python -m pytest -q offers/fleet/tests/domain"
+    },
+    {
+      "id": "ACC-P30-SIGNALS",
+      "phase": "P30",
+      "required": true,
+      "description": "Signal/scoring/proof asset tests pass with reason/evidence assertions.",
+      "suggested_command": "python -m pytest -q offers/fleet/tests/signals offers/fleet/tests/proof"
+    },
+    {
+      "id": "ACC-P40-API-CLI",
+      "phase": "P40",
+      "required": true,
+      "description": "API/CLI parity and machine-readable contract tests pass.",
+      "suggested_command": "python -m pytest -q offers/fleet/tests/api_cli"
+    },
+    {
+      "id": "ACC-P50-UI",
+      "phase": "P50",
+      "required": true,
+      "description": "Required offer UI states and golden user workflow pass browser/e2e tests.",
+      "suggested_command": "pnpm test:e2e -- --grep '@fleet'"
+    },
+    {
+      "id": "ACC-P60-REPLAY",
+      "phase": "P60",
+      "required": true,
+      "description": "Full offline replay/evals/telemetry/security checks pass without live network.",
+      "suggested_command": "python -m pytest -q tests/e2e/fleet offers/fleet/evals"
+    },
+    {
+      "id": "ACC-P70-FULL",
+      "phase": "P70",
+      "required": true,
+      "description": "Repository-wide relevant tests, fresh checkout bootstrap and final replay pass.",
+      "suggested_command": "./scripts/final-readiness.sh fleet"
+    }
+  ]
+}

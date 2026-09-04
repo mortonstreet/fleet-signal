@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "phase",
+    "status",
+    "commit_sha",
+    "changed_paths",
+    "tests",
+    "blockers"
+  ],
+  "properties": {
+    "phase": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "CANDIDATE_COMPLETE",
+        "BLOCKED"
+      ]
+    },
+    "commit_sha": {
+      "type": "string"
+    },
+    "changed_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tests": {
+      "type": "array"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blockers": {
+      "type": "array"
+    }
+  }
+}

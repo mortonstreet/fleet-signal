@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "phase",
+    "verdict",
+    "findings"
+  ],
+  "properties": {
+    "phase": {
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED_EXTERNAL"
+      ]
+    },
+    "findings": {
+      "type": "array"
+    }
+  }
+}
